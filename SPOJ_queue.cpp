@@ -1,7 +1,4 @@
-//
-//  practise.cpp
-//  Lekcja_16
-//
+
 //  Created by Kuba Makowiecki on 06/11/2021.
 //
 #include <iostream>
@@ -27,7 +24,7 @@ int main(int argc, const char * argv[]) {
             //ostatnia szufladka w tablicy
             int max = queue[size-1];
  
-            //pętla wykonująca się OD TYŁU tzn. od ostatniej szufladki [rozmiar-1] poniewaz liczymy od 0;
+            //pętla wykonująca się OD TYŁU tzn. od ostatniej szufladki [size-1] poniewaz liczymy od 0;
             for(int i = size - 1; i > 0; i-- )
             {
                 //jeśli znak leżący na lewo od ostatniej szufladki jest mniejszy od wartości ostatniej szufladki przypisujemy mu wartośc 0, w domyśle usuwamy;
@@ -42,7 +39,7 @@ int main(int argc, const char * argv[]) {
             //wyświetlanie finalnej kolejki
                 for(int x=0; x < size; x++)
                 {
-                    //jest pomijany gdy kolejka[x] ma wartosc 0, chcemy pominąć 0 podczas wyświetlania, ponieważ wcześniej zamienialiśmy wartości szufladek mniejszych na 0;
+                    //jest pomijany gdy queue[x] ma wartosc 0, chcemy pominąć 0 podczas wyświetlania, ponieważ wcześniej zamienialiśmy wartości szufladek mniejszych na 0;
                     if(queue[x])
                     std::printf("%c", queue[x]);
  
